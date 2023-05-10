@@ -146,8 +146,7 @@ let launchChromium = async function(url) {
     let startingUrl = url;
     if ('1' === kioskMode)
     {
-      console.log("Enabling KIOSK mode");
-      startingUrl = `--app= ${url}`;
+      flags.push('--kiosk');
     }
     else
     {
